@@ -1,0 +1,2 @@
+# demotq
+proiect demo techquarter
