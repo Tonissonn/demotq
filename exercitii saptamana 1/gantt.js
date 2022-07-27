@@ -1481,10 +1481,6 @@ let input = [
   let maxDate = allInputDates.reduce(function (a, b) { return a > b ? a : b; });
   
   
-  // console.log(allInputDates)
-  // console.log(minDate)
-  // console.log(maxDate)
-  
   let startMonth = new Date(minDate).getMonth()
   let endMonth = new Date(maxDate).getMonth()
   let startYear = new Date(minDate).getFullYear()
@@ -1503,7 +1499,7 @@ let input = [
   
     for(let month = minMonth; month<=maxMonth; ++month){
         let newMonth = {}
-        // console.log(month)
+  
         for(let day = 1; day <= monthsLen[month]; ++day){
           newMonth[day]=day
         }
@@ -1522,27 +1518,19 @@ let input = [
     }
     timeline[year]=newYear
   }
-  // console.log(timeline, startYear,startMonth,endYear,endMonth)
-  // console.log(timeline["2019"]["7"]["5"])
     
   input.forEach(mail => {
     let currentDate = new Date(mail.date)
-    // console.log(timeline[currentDate.getFullYear()][currentDate.getMonth()]["from"])
     
     if(timeline[currentDate.getFullYear()][currentDate.getMonth()]["from"].indexOf(mail.from)===-1){
       timeline[currentDate.getFullYear()][currentDate.getMonth()]["from"].push(mail.from)
-    //   timeline[currentDate.getFullYear()][currentDate.getMonth()]["list"]={}
       timeline[currentDate.getFullYear()][currentDate.getMonth()]["list"][mail.from]=timeline[currentDate.getFullYear()][currentDate.getMonth()]["noMails"];
     }
   
     let localString = timeline[currentDate.getFullYear()][currentDate.getMonth()]["list"]
-    // localString[mail.from][currentDate.getDate()]='='
     const marked = localString[mail.from].substring(0,currentDate.getDate()) + "=" + localString[mail.from].substring(currentDate.getDate()+1);
-    // console.log(marked);
     localString[mail.from]=marked;
-    // console.log(mail["from"])
   });
-  // console.log(timeline)
   
   for(let year=startYear; year<= endYear; ++year){
     let minMonth = 0, maxMonth=11
@@ -1556,9 +1544,7 @@ let input = [
           let loc = calendar.substring(0)+digit%10;
           calendar=loc;
         }
-        // console.log(length.length)
         console.log(month+1+"/"+year+"\t\t\t"+calendar)
-        // if(timeline[year][month]["list"])
         timeline[year][month]["from"].forEach(a=>{
           let tabs = "\t"
           if(a.length<16) tabs = "\t\t" 
