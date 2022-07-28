@@ -37,6 +37,14 @@ function updateToJson(newMail: Mail, pos: number){
     fs.writeFileSync('./update.json', JSON.stringify(jsonData, null, 4) , 'utf-8')
 }
 
+function getOneFromJson(pos: number){
+    let oldData: string = fs.readFileSync("./mails.json", "utf8")
+    let jsonData: Mail[] = JSON.parse(oldData)
+
+    console.log(jsonData[pos])
+}
+
 addToJson({from:"Ana",date:"acum",to:["idk"]})
 deleteFromJson(1)
 updateToJson({from:"Marina",date:"atunci",to:["noone"]}, 1)
+getOneFromJson(1)
