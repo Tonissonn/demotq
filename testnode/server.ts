@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
  });
 
 
-app.post('/mail', (req, res) => {
+app.post('/', (req, res) => {
   const { from, date, to } = req.body;
   console.log(req.body)
   if (!from?.trim() || !date?.trim()) {
