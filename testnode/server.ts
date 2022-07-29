@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import { addMail,getMail,getMails,delMail,updMail} from './index';
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 // app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.urlencoded({
