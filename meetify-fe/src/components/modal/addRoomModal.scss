@@ -1,0 +1,68 @@
+@import "src/assets/globals.scss";
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-color-modal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .add-room-modal {
+    width: 30%;
+    height: 25%;
+    background: $bg-modal;
+    box-shadow: -4px -4px 10px $transparent-black,
+      4px 4px 10px $transparent-black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+
+    #modal-container {
+      display: grid;
+      grid-template-rows: 30% auto;
+      h3 {
+        padding: 0% 5%;
+      }
+      #modal-form {
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        label {
+          display: flex;
+          flex-direction: column;
+          padding: 5%;
+          .input-text {
+            width: 82%;
+            height: 43px;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            background-color: $bg-modal;
+            color: $pure-white;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+    }
+    #footer {
+      background: $bg-footer;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      button {
+        width: 126px;
+        height: auto;
+      }
+    }
+  }
+}

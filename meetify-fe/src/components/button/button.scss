@@ -1,0 +1,39 @@
+@import "src/assets/globals.scss";
+
+.button {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:disabled {
+    opacity: 0.35;
+  }
+  &:enabled {
+    cursor: pointer;
+  }
+  &.primary {
+    border: 1px solid $secondaryColor;
+    color: $secondaryColor;
+    background: $primaryColor;
+    &:hover {
+      border: 1px solid $primaryColor;
+      color: $primaryColor;
+      background: $secondaryColor;
+    }
+  }
+  &.secondary {
+    border: 1px solid $primaryColor;
+    color: $primaryColor;
+    background: $secondaryColor;
+    &:hover {
+      border: 1px solid $secondaryColor;
+      color: $secondaryColor;
+      background: $primaryColor;
+    }
+  }
+}

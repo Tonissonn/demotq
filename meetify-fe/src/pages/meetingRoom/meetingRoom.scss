@@ -1,0 +1,31 @@
+@import "src/assets/globals.scss";
+
+.meeting-room {
+  height: 100%;
+  color: $pure-white;
+  font-family: Barlow, sans-serif;
+  text-align: left;
+  margin-left: 5%;
+  p {
+    opacity: 0.5;
+  }
+  .filter-bar {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto auto 290px;
+
+    margin-right: 5%;
+    span {
+      select {
+        background: $primaryColor;
+        opacity: 0.7;
+        color: $pure-white;
+        height: 43px;
+        border-radius: 5px;
+      }
+    }
+  }
+  .table {
+    margin-right: 5%;
+  }
+}

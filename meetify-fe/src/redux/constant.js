@@ -1,0 +1,6 @@
+export const ADD_TO_MEETINGS = "ADD_TO_MEETINGS";
+export const REMOVE_FROM_MEETINGS = "REMOVE_FROM_MEETINGS";
+export const MEETING_LIST = "MEETING_LIST";
+export const ROOM_LIST = "ROOM_LIST";
+export const SET_MEETING_LIST = "SET_MEETING_LIST";
+export const SET_ROOM_LIST = "SET_ROOM_LIST";

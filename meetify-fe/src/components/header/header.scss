@@ -1,0 +1,159 @@
+@import "src/assets/globals.scss";
+
+.header-container {
+  background-color: $primaryColor;
+  padding: 15px;
+  align-content: center;
+  display: grid;
+  grid-template-columns: 1fr 0.1fr 1fr 1fr 1fr 6fr;
+  gap: 10px;
+}
+span {
+  white-space: nowrap;
+}
+.links {
+  color: $pure-grey;
+  font-family: "Barlow", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  &.active {
+    color: $pure-white;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.right-header {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 10px;
+}
+
+[data-initials]:before {
+  background: $text-initials;
+  color: $pure-white;
+  content: attr(data-initials);
+
+  display: inline-block;
+  font-weight: bold;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 0.5em;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+}
+.account-header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: space-around;
+  justify-content: center;
+}
+.header-username {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  color: $pure-white;
+}
+.header-mail {
+  font-size: 12px;
+  font-family: "Barlow";
+  color: $pure-white;
+  opacity: 0.5;
+}
+
+.item-align {
+  align-self: center;
+}
+.logo-align {
+  align-self: center;
+  cursor: pointer;
+}
+
+.theme-switch {
+  align-self: center;
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 55px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: $bg-slider;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: $bg-slider-before;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: $bg-slider-checked;
+}
+input:checked + .slider::before {
+  background: $dirty-white;
+}
+
+input:checked + .slider:before {
+  transform: translateX(21px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.theme-text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 130%;
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $pure-white;
+
+  opacity: 0.5;
+}

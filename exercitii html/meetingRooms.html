@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Meeting Rooms</title>
+    <link rel="shortcut icon" href="http://www.techquarter.io/favicon.ico" />
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Meeting Rooms</h1>
+      <p>Enter on a meeting room to see its calendar view of the events.</p>
+      <label for="filterCurrentStatus"
+        ><select id="status" name="status">
+          <option>Filter by current status</option>
+          <option value="Occupied">Occupied</option>
+          <option value="Free">Free</option>
+        </select></label
+      >
+      <label for="filterCapacity"
+        ><select id="capacity" name="capacity">
+          <option>Filter by capacity</option>
+          <option value="small">Less than 15</option>
+          <option value="medium">Between 15 and 25</option>
+          <option value="large">Larger than 25</option>
+        </select></label
+      >
+      <label for="filterPopularity"
+        ><select id="popularity" name="popularity">
+          <option>Filter by popularity</option>
+          <option value="small">Less popular</option>
+          <option value="medium">Popular</option>
+          <option value="large">Most popular</option>
+        </select></label
+      >
+      <table>
+        <tr>
+          <th>Name</th>
+          <th>Current Status</th>
+          <th>Capacity</th>
+          <th>Active Appointments</th>
+        </tr>
+        <tr>
+          <td>Meeting Room 01</td>
+          <td>Occupied</td>
+          <td>15 members</td>
+          <td>15 future meetings</td>
+        </tr>
+        <tr>
+          <td>Meeting Room 10</td>
+          <td>Occupied</td>
+          <td>25 members</td>
+          <td>15 futures meetings</td>
+        </tr>
+        <tr>
+          <td>Meeting Room Top Floor</td>
+          <td>Free</td>
+          <td>15 members</td>
+          <td>No meeting</td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>

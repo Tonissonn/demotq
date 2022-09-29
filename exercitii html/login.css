@@ -1,0 +1,221 @@
+:root {
+  --unselected-color: rgb(137, 137, 137);
+  --primary-text-form: rgb(19, 19, 19);
+  --secondary-text-form: rgb(102, 102, 102);
+  --border-form: rgb(137, 137, 137);
+  --secondary-color: rgb(246, 146, 30);
+  --header-bar: rgb(234, 234, 234);
+  --bg-color: rgb(244, 244, 244);
+  --form-background: rgb(255, 255, 255);
+  --welcome-text: rgb(52, 52, 52);
+}
+[data-theme="dark"] {
+  --unselected-color: rgb(144, 144, 144);
+  --primary-text-form: rgb(255, 255, 255);
+  --secondary-text-form: rgb(144, 144, 144);
+  --border-form: rgb(144, 144, 144);
+  --secondary-color: rgb(255, 193, 50);
+  --header-bar: rgb(34, 34, 34);
+  --bg-color: rgb(34, 34, 34);
+  --form-background: rgb(34, 34, 34);
+  --welcome-text: rgb(255, 255, 255);
+}
+
+[user-type="admin"][data-theme="light"] {
+  --primary-button-form: rgb(19, 19, 19);
+  --secondary-button-form: rgb(148, 148, 148);
+}
+[user-type="user"][data-theme="light"] {
+  --primary-button-form: rgb(148, 148, 148);
+  --secondary-button-form: rgb(19, 19, 19);
+}
+[user-type="user"][data-theme="dark"] {
+  --primary-button-form: rgb(144, 144, 144);
+  --secondary-button-form: rgb(255, 255, 255);
+}
+[user-type="admin"][data-theme="dark"] {
+  --primary-button-form: rgb(255, 255, 255);
+  --secondary-button-form: rgb(144, 144, 144);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  box-sizing: content-box;
+}
+.root {
+  height: 100%;
+}
+.page-header {
+  background-color: var(--header-bar);
+  padding: 2vh;
+  display: flex;
+}
+.header-left {
+  flex: 50%;
+  /* font-size: 1.5vh; */
+}
+.header-logo {
+  padding: 0;
+  width: 5vw;
+  height: auto;
+}
+.header-right {
+  float: right;
+  font-size: 1.3vh;
+}
+
+.page-body {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  background-color: var(--bg-color);
+}
+.half-page-content {
+  flex: 50%;
+  position: relative;
+}
+
+.external-form {
+  position: absolute;
+  width: 60%;
+  height: 45%;
+  right: 5%;
+  top: 30%;
+  /* background-color: rgba(82, 82, 93, 0.246); */
+}
+.user-type-header {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.half-user-type {
+  flex: 50%;
+  position: relative;
+}
+
+.left-user-type {
+  /* position: absolute; */
+  right: 15%;
+}
+.right-user-type {
+  /* position: absolute; */
+  left: 15%;
+}
+
+.select-user-button-primary {
+  border: none;
+  background: none;
+  color: var(--primary-button-form);
+  font-family: Barlow;
+  font-size: 1.3vw;
+  letter-spacing: 0.08vw;
+}
+.select-user-button-secondary {
+  border: none;
+  background: none;
+  color: var(--secondary-button-form);
+  font-family: Barlow;
+  font-size: 1.3vw;
+  letter-spacing: 0.08vw;
+}
+a {
+  color: var(--secondary-color);
+}
+
+.internal-form {
+  /* border-color: var(--border-form); */
+  position: absolute;
+  width: 100%;
+  height: 85%;
+  bottom: 0;
+  background-color: var(--form-background);
+
+  /* border-radius: 35px; */
+  border: 5px solid var(--unselected-color);
+  border-radius: 10px;
+  text-align: center;
+}
+.form-input-text {
+  position: relative;
+  left: 16px;
+  top: 28px;
+}
+
+.form-label {
+  display: block;
+  color: var(--primary-text-form);
+}
+.form-input-text {
+  display: block;
+}
+.welcome-text {
+  font-family: Barlow;
+  font-size: 5vw;
+  color: var(--welcome-text);
+  position: absolute;
+  width: 60%;
+  height: 45%;
+  left: 5%;
+  top: 35%;
+  line-height: 10vh;
+}
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

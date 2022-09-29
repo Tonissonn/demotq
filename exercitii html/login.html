@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta data-theme="light" /> -->
+    <title>LogIn</title>
+    <link rel="shortcut icon" href="http://www.techquarter.io/favicon.ico" />
+    <link rel="stylesheet" href="./login.css" />
+  </head>
+  <body>
+    <script src="./login.js"></script>
+    <div class="root">
+      <div class="page-header">
+        <div class="header-left"><img src="./light-logo.PNG" class="header-logo" id="header-logo" alt=""></div>
+        <div class="header-right">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" onchange="switchTheme()" />
+            Dark/White
+            <div class="slider round"></div>
+          </label>
+        </div>
+      </div>
+      <div class="page-body">
+        <div class="half-page-content">
+          <div class="external-form">
+            <div class="user-type-header">
+              <div class="half-user-type">
+                <div class="left-user-type">
+                  <button class="select-user-button-secondary" onclick="switchToUser()"> <b>STANDARD USER</b></a>
+                </div>
+              </div>
+              <div class="half-user-type">
+                <div class="right-user-type"><button class="select-user-button-primary" onclick="switchToAdmin()"> <b>ADMINISTRATOR</b></a></div>
+              </div>
+            </div>
+            <div class="internal-form">
+              <form>
+                <label class="form-label" for="loginText">LOG IN</label>
+                <label class="form-label" for="email">
+                  Email
+                  <input
+                    class="form-input-text"
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                </label>
+                <label class="form-label" for="password">
+                  Password
+                  <input
+                    class="form-input-text"
+                    type="password"
+                    name="password"
+                    id="password"
+                    placeholder="Enter password"
+                  />
+                </label>
+                <label class="form-label" for="remember">
+                  <input type="checkbox" />
+                  Remember Me
+                </label>
+                <label for="forgorPassword"
+                  ><a
+                    href="https://www.amazon.de/s?k=sunflower+lecithin&language=en_GB&adgrpid=81808895013&gclid=EAIaIQobChMIgMGYob7N-QIVdgIGAB0OOQ9gEAAYAiAAEgLA6vD_BwE&hvadid=394689733604&hvdev=c&hvlocphy=1011806&hvnetw=g&hvqmt=b&hvrand=12572081767438830718&hvtargid=kwd-296305226610&hydadcr=27899_1817196&tag=googdemozdesk-21&ref=pd_sl_548k5r8cmc_b"
+                    >Forgot password</a
+                  ></label
+                >
+                <input type="submit" />
+                <label class="form-label" for="notAMember"
+                  >Not A Member? Sign Up <a href="./signup.html">Here</a></label
+                >
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="half-page-content">
+          <div class="welcome-text">
+            <b>Welcome! Let's sign in to your account.</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

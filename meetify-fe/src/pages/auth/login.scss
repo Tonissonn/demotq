@@ -1,0 +1,146 @@
+@import "src/assets/globals.scss";
+
+.login-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  align-items: center;
+  justify-items: center;
+  .half-page-container {
+    grid-row-start: 2;
+    color: $pure-white;
+    .external-form {
+      color: $pure-white;
+      height: 587px;
+      display: grid;
+      align-items: end;
+      .user-type-header {
+        display: grid;
+        grid-template-columns: auto auto;
+        .user-type-primary {
+          cursor: pointer;
+          color: $pure-white;
+        }
+        .user-type-secondary {
+          cursor: pointer;
+          color: $pure-grey;
+        }
+      }
+      .user-type-admin {
+        margin-bottom: -18px;
+        margin-left: 250px;
+        z-index: 2;
+      }
+      .user-type-standard {
+        margin-bottom: -18px;
+        margin-left: -280px;
+        z-index: 2;
+      }
+      .internal-form {
+        width: 534px;
+        height: 520px;
+        border: 1px $border-internal-form solid;
+        border-radius: 5px;
+        bottom: 0;
+        form {
+          display: flex;
+          flex-direction: column;
+          align-content: space-between;
+          text-align: left;
+          a {
+            color: $secondaryColor;
+          }
+          h4 {
+            margin-left: 15%;
+            margin-bottom: 7%;
+          }
+          .form-label {
+            margin-left: 15%;
+          }
+          .form-input-text {
+            margin: 3% 15%;
+            padding: 5px;
+            color: $logo-grey;
+            background-color: $transparent-semi-black;
+            border: 1px solid $pure-grey;
+          }
+          .remember-forgot {
+            margin: 2% 15% 9% 15%;
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-between;
+            .checkbox {
+              position: relative;
+              padding-left: 35px;
+              cursor: pointer;
+              input {
+                position: absolute;
+                opacity: 0;
+                cursor: pointer;
+                height: 0;
+                width: 0;
+              }
+              .checkmark {
+                position: absolute;
+                left: 0;
+                height: 25px;
+                width: 25px;
+                background-color: $transparent-pure-black;
+                border: 1px solid $pure-white;
+                border-radius: 4px;
+                &:after {
+                  content: "";
+                  position: absolute;
+                  display: none;
+                }
+                &:after {
+                  left: 9px;
+                  top: 5px;
+                  width: 5px;
+                  height: 10px;
+                  border: solid $pure-white;
+                  border-width: 0 3px 3px 0;
+                  -webkit-transform: rotate(45deg);
+                  -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+                }
+              }
+              &:hover input ~ .checkmark {
+                background-color: $pure-grey;
+              }
+              & input:checked ~ .checkmark:after {
+                display: block;
+              }
+            }
+          }
+          .button-submit {
+            height: 30px;
+            margin: 0 15%;
+          }
+          .not-a-member {
+            margin: 15%;
+            color: $pure-grey;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .welcome-text {
+      color: $pure-white;
+      width: 528px;
+      height: 420px;
+      font-family: "Barlow";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 100px;
+      line-height: 100px;
+    }
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px $secondaryColor inset !important;
+}

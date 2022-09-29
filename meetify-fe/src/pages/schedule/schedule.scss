@@ -1,0 +1,33 @@
+@import "src/assets/globals.scss";
+
+.schedule-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, 1fr);
+  text-align: left;
+  .future-meetings {
+    grid-area: 1 / 1 / 6 / 2;
+    color: $pure-white;
+    background-color: $bg-modal;
+    overflow: auto;
+    h1 {
+      margin-left: 5%;
+    }
+    .future-list {
+      margin: 0 5%;
+    }
+  }
+  .past-meetings {
+    grid-area: 6 / 1 / 9 / 2;
+    color: $pure-black;
+    background-color: $bg-room-card;
+    overflow: auto;
+    h1 {
+      margin-left: 5%;
+    }
+    .past-list {
+      margin: 0 5%;
+    }
+  }
+}

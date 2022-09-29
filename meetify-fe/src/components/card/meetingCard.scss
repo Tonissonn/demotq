@@ -1,0 +1,29 @@
+@import "src/assets/globals.scss";
+
+.card-meeting {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $bg-color;
+  margin-top: 15px;
+  padding: 15px;
+  align-items: center;
+  border-radius: 10px;
+  .title {
+    text-transform: uppercase;
+  }
+  .details {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    span {
+      padding-left: 10px;
+      display: flex;
+      .edit-link {
+        color: $secondaryColor;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+    }
+  }
+}

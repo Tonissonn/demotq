@@ -1,0 +1,49 @@
+@import "src/assets/globals.scss";
+
+.table-content {
+  background-color: $light-blue;
+  border: 1px solid $grey;
+  .table-header {
+    background: $bg-right;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-items: start;
+    padding-left: 10px;
+    .table-header-name {
+      padding: 15px 0;
+      font-family: "Barlow", sans-serif;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 21px;
+      color: $grey;
+    }
+  }
+  .table-body {
+    .table-row {
+      justify-content: space-between;
+      background: $row-color;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding-left: 10px;
+      .table-row-item {
+        padding: 15px 0;
+        font-family: "Barlow", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 21px;
+        display: flex;
+        align-items: center;
+        color: $pure-white;
+        opacity: 0.7;
+      }
+      &:nth-child(even) {
+        background: $bg-modal;
+      }
+      &:hover {
+        opacity: 0.95;
+      }
+    }
+  }
+}

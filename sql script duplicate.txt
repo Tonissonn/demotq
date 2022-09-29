@@ -1,0 +1,79 @@
+CREATE TABLE Persons (
+    PersonID int IDENTITY(1,1) PRIMARY KEY,
+    LastName varchar(255),
+    FirstName varchar(255),
+);
+
+
+INSERT INTO dbo.Persons(LastName, FirstName) VALUES('Test', 'Dorin')
+GO 4
+
+drop table Persons
+
+
+SELECT 
+    ROW_NUMBER() OVER (
+			partition by LastName
+            ORDER BY PersonID
+			
+    ) row_num, 
+    PersonID, 
+    LastName,
+	FirstName
+FROM Persons
+
+
+select LastName, count(LastName) as Counter from Persons
+group by LastName
+
+
+UPDATE Persons
+SET FirstName = 'Viorel'
+
+-- ceva update frumos care daca ai duplicat ti-l numeroteaza atlfel il lasa asa cum e
+UPDATE Persons
+SET LastName = IsNull((
+	(SELECT concat(aa.LastName,row_num)
+	from (SELECT 
+			ROW_NUMBER() OVER (	partition by LastName ORDER BY PersonID) row_num, 
+			PersonID, 
+			LastName
+		FROM (SELECT Persons.PersonID, Persons.LastName,Persons.FirstName from
+			Persons join (select LastName, count(LastName) as Counter from Persons group by LastName) xx
+			on Persons.LastName=xx.LastName 
+			where xx.Counter>1
+		) yy) aa
+	where aa.PersonID = Persons.PersonID)
+),LastName)
+
+
+
+select * from Persons
+
+
+
+SELECT Persons.PersonID, Persons.LastName,Persons.FirstName from
+			Persons join (select LastName, count(LastName) as Counter from Persons group by LastName) xx
+			on Persons.LastName=xx.LastName 
+			where xx.Counter>1
+
+
+delete from Persons
+where LastName like 'Test%' 
+
+select * from Persons
+
+SELECT concat(LastName,row_num), bb.PersonID
+	from (
+	SELECT 
+			ROW_NUMBER() OVER (	partition by LastName ORDER BY PersonID) row_num, 
+			PersonID, 
+			LastName
+		FROM (SELECT Persons.PersonID, Persons.LastName,Persons.FirstName from
+			Persons join (select LastName, count(LastName) as Counter from Persons group by LastName) xx
+			on Persons.LastName=xx.LastName 
+			where xx.Counter>1
+		) aa 
+
+	) bb
+

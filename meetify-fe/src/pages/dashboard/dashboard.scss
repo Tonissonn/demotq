@@ -1,0 +1,61 @@
+@import "src/assets/globals.scss";
+
+.dashboard-container {
+  height: 100%;
+  font-family: Barlow, sans-serif;
+  display: grid;
+  grid-template-columns: 60% 37.5%;
+  grid-template-rows: auto auto 1fr auto;
+  grid-column-gap: 2.5%;
+  color: $pure-white;
+  margin: 0 0 0 8%;
+
+  .subheader-container {
+    text-align: left;
+    h1 {
+      font-weight: 900;
+      font-size: 35px;
+      line-height: 40px;
+    }
+    h4 {
+      color: $logo-grey;
+    }
+  }
+  .buttons-container {
+    .schedule-button {
+      height: 45px;
+      width: 403px;
+    }
+    .buttons-grid {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .meeting-cards-container {
+    overflow: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr;
+    }
+    gap: 20px;
+    grid-auto-rows: auto;
+  }
+  .room-cards-container {
+    overflow: auto;
+    grid-area: 1 / 2 / -1 / -1;
+    background-color: $bg-room-card;
+    border-top-left-radius: 10px;
+    h1 {
+      font-family: "Barlow", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 25px;
+      line-height: 35px;
+      color: $h1-card;
+      text-align: left;
+      padding-left: 20px;
+    }
+  }
+}

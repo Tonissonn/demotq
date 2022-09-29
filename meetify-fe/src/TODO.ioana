@@ -1,0 +1,7 @@
+//librarii fisiere si css ca altfel ne lasa commenturi in code review. e importanta ordinea la import. -Ioana. Prima linie nu trebuie sa fie goala. Mai greseste si ea.
+//Tema: toate folderele alea. fisierele alea. La tsx trebuie sa avem macar un div sa vedem ca ni se face pagina. dupa ce avem asta, vrea sa facem header. ca apoi sa putem face dashboard.
+// zice de header ca de saptamana viitoare sa facem login. deci azi facem folder dashboard. luni axios si ceva call-uri la BE. prima data facem niste. HEADER COMPONENETA SEPARATA FARA TOGGLE.
+//mai mult ne uitam peste documentatia de la react router. daca avem intrebari e Eliza online. Mai are nevoie de un voluntar ca sa ajute sa explice la Raresh tabel dinamic. E cristi momentan si niste Da-uri in sala.
+// E ivi probabil. Astfel ioana merge la rares si tudor are o scurta intrebare. a facut main app si nu mai merg routele. nu stie de ce nu merg, in index are app, in app are ruta aia facut de ea.
+// ioana zice ca probabil trebuie sa puna ce vede ea. Laur interaba unde trebuie pus index.tsx
+//Ioana zice ca acolo putem zice ca login se poate pune pe ruta de main. nu a pomenit chiar tot. Ivi intreaba de ceva provider daca se pune in App. Nu tine toata logica de routing in app.tsx ca sa fie in main.

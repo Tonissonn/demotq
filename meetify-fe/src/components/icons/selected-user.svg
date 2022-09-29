@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 66 18" xmlns="http://www.w3.org/2000/svg">
+  <rect width="66.212" height="18.055" style="stroke: rgba(0, 0, 0, 0); fill: rgb(34, 34, 34);"/>
+  <path style="fill: rgba(216, 216, 216, 0); stroke: rgb(144, 144, 144);" d="M 0.031 17.886 C 12.855 16.446 28.613 20.401 33.013 -0.025"/>
+  <path style="stroke: rgb(144, 144, 144); fill: rgba(205, 81, 81, 0);" d="M 33.315 0 C 46.053 1.44 61.706 -2.515 66.076 17.911" transform="matrix(-1, 0, 0, -1, 99.390993, 17.911)"/>
+</svg>

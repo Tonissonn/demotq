@@ -1,0 +1,169 @@
+@import "src/assets/globals.scss";
+
+.modal-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $bg-color-modal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    width: 74%;
+    height: 76%;
+    background: $bg-modal;
+    box-shadow: -4px -4px 10px $transparent-black,
+      4px 4px 10px $transparent-black;
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 90% 10%;
+    position: fixed;
+    z-index: 1;
+    overflow: auto;
+
+    #modal-container {
+      display: grid;
+      grid-template-columns: 38% 62%;
+
+      #left {
+        padding: 40px;
+        #modal-form {
+          color: $pure-white;
+          text-align: left;
+
+          .list-of-chips {
+            padding-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .time-picker {
+            display: flex;
+            align-items: center;
+          }
+
+          input[type="date"]::-webkit-calendar-picker-indicator {
+            background-image: $logoData;
+            transform: translateX(-100px);
+            width: 15px;
+            padding: 10px;
+            margin: 0px;
+            margin-left: 10px;
+            border: 1px solid $calendar-indicator;
+            border-radius: 4px;
+          }
+          input[type="date"]::-webkit-calendar- #modal-hdr {
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+          }
+          input[type="date"]::-webkit-datetime-edit {
+            color: $pure-white;
+            transform: translateX(50px);
+          }
+          input[type="date"] {
+            background: $transparent-pure-black;
+            border: 1px solid $select-hour;
+            border-radius: 6px;
+          }
+          input[type="text"] {
+            width: 82%;
+            height: 43px;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            background-color: $bg-modal;
+            color: $pure-white;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          .select-hour {
+            background-color: $transparent-pure-black;
+            border: 1px solid $select-hour;
+            border-radius: 6px;
+            width: 80px;
+            height: 37px;
+            color: $pure-white;
+            text-align: center;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background-image: url("../icons/Vector\ 9.svg");
+            background-repeat: no-repeat;
+            background-position-x: 90%;
+            background-position-y: 15px;
+            &:focus {
+              box-shadow: 0 0 10px 100px $transparent-pure-black inset;
+            }
+          }
+          .select-option {
+            position: absolute;
+            background-color: $calendar-indicator;
+          }
+          .select-users {
+            width: auto;
+            height: 43px;
+            background-color: $pure-black;
+            border: 1px solid $border-color;
+            border-radius: 6px;
+            color: $pure-white;
+            -moz-appearance: none;
+          }
+
+          .tag-item {
+            display: inline-block;
+            font-size: 14px;
+            background: $tag-item;
+            border-radius: 3px;
+            height: 30px;
+            padding: 0 4px 0 1rem;
+            display: inline-flex;
+            align-items: center;
+            margin: 0 0.3rem 0.3rem 0;
+          }
+
+          .tag-item > .button {
+            background-color: $transparent-pure-black;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            font: inherit;
+            margin-left: 10px;
+            font-weight: bold;
+            padding: 0;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+      }
+      #right {
+        background: $bg-right;
+
+        #x-btn {
+          float: right;
+        }
+      }
+    }
+    #footer {
+      background: $bg-footer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      #save-btn {
+        width: 126px;
+        height: 31px;
+      }
+      #cancel-btn {
+        width: 126px;
+        height: 31px;
+      }
+    }
+  }
+}

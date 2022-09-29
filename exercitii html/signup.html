@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+    <link rel="shortcut icon" href="http://www.techquarter.io/favicon.ico" />
+    <style>
+      .pageDoc {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .halfPageContent {
+        flex: 50%;
+      }
+      .formLabel {
+        display: block;
+      }
+      .formInputText {
+        display: block;
+      }
+      .welcomeText {
+        font-size: 100px;
+        font-size-adjust: inherit;
+        padding: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pageDoc">
+      <div class="halfPageContent">
+        <div class="userTypeHeader">User/Admin</div>
+        <div>
+          <form>
+            <label class="formLabel" for="signinText">SIGN UP</label>
+            <label class="formLabel" for="username">
+              Name
+              <input
+                class="formInputText"
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Enter name"
+              />
+            </label>
+            <label class="formLabel" for="email">
+              Email
+              <input
+                class="formInputText"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter email"
+              />
+            </label>
+            <label class="formLabel" for="password">
+              Password
+              <input
+                class="formInputText"
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Min 8 characters, one capital letter, one number"
+              />
+            </label>
+            <label class="formLabel" for="passwordConfirm">
+              Password
+              <input
+                class="formInputText"
+                type="password"
+                name="passwordConfirm"
+                id="passwordConfirm"
+                placeholder="Min 8 characters, one capital letter, one number"
+              />
+            </label>
+            <label class="formLabel" for="remember">
+              <input type="checkbox" />
+              I Accept <a href="http://google.com">Terms And Conditions</a>
+            </label>
+            <input type="submit" />
+            <label class="formLabel" for="acceptTermsAndCondition"
+              >Already A Member? Sign In <a href="./login.html">Here</a></label
+            >
+          </form>
+        </div>
+      </div>
+      <div class="halfPageContent">
+        <div class="welcomeText">Welcome! Let's sign in to your account.</div>
+      </div>
+    </div>
+  </body>
+</html>
